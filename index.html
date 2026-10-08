@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>II B.Sc Web Programming Lab Codes</title>
+<style>
+:root{--bg:#f6f4ef;--fg:#1d2433;--mut:#6a7285;--ac:#1f5eff;--card:#fff;--ln:#d9d6cc;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12161f;--fg:#e8ebf2;--mut:#8f98ad;--ac:#7da2ff;--card:#1b2130;--ln:#2e3548}}
+:root[data-theme="dark"]{--bg:#12161f;--fg:#e8ebf2;--mut:#8f98ad;--ac:#7da2ff;--card:#1b2130;--ln:#2e3548}
+html{scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{max-width:900px;margin:auto;padding:20px 16px 8px}
+h1{font-size:clamp(24px,5vw,34px);margin:0}
+header p{margin:4px 0 0;color:var(--mut)}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--ln);display:flex;gap:6px;overflow-x:auto;padding:8px 16px}
+nav a{flex:none;color:var(--fg);text-decoration:none;border:1px solid var(--ln);background:var(--card);border-radius:18px;padding:3px 12px;font-size:14px}
+nav a:hover{border-color:var(--ac)}
+main{max-width:900px;margin:auto;padding:8px 16px 40px}
+section{margin-top:28px}
+h2{font-size:18px;margin:0 0 10px}
+.f{margin-bottom:12px;border:1px solid var(--ln);border-radius:8px;background:var(--card);overflow:hidden}
+.fh{display:flex;justify-content:space-between;align-items:center;padding:6px 8px 6px 12px;border-bottom:1px solid var(--ln);font-size:13px;color:var(--mut)}
+.fh button{font:inherit;font-size:13px;padding:4px 14px;border:1px solid var(--ac);background:var(--ac);color:#fff;border-radius:6px;cursor:pointer}
+.fh button.ok{background:#1a8f4a;border-color:#1a8f4a}
+button:focus-visible,a:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+pre{margin:0;padding:12px;overflow:auto;max-height:420px;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;color:var(--fg)}
+</style>
+</head>
+<body>
+<header><h1>Web Programming Lab Codes</h1><p>II B.Sc – 13 programs. Each code block has a Copy button.</p></header>
+<nav id="nav" aria-label="Programs"></nav>
+<main id="main"></main>
+
+<div hidden id="data">
+<section data-t="1. Write an HTML document to display a simple calculator.">
+<textarea data-n="SimpleCalculator.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Simple Calculator</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin-top: 50px;
+background-color: #f0f0f0;
+}
+.calculator {
+width: 500px;
+margin: 0 auto;
+border: 1px solid #ccc;
+padding: 20px;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.calculator input {
+width: 100%;
+margin-bottom: 10px;
+padding: 10px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 18px;
+text-align: right;
+}
+.calculator button {
+width: 70px;
+padding: 15px;
+margin: 5px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 18px;
+background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class="calculator">
+<input type="text" id="display" readonly>
+<button>7</button>
+<button>8</button>
+<button>9</button>
+<button class="operator">+</button>
+<br>
+<button>4</button>
+<button>5</button>
+<button>6</button>
+<button class="operator">-</button>
+<br>
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button class="operator">*</button>
+<br>
+<button>0</button>
+<button>.</button>
+<button class="equals">=</button>
+<button class="clear">C</button>
+</div>
+</body>
+</html>
+</textarea></section>
+
+<section data-t="2. Write an HTML document to create college application form.">
+<textarea data-n="college form.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Application Form</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+padding: 20px;
+}
+label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+}
+input[type=text], input[type=email], textarea, select {
+width: 100%;
+padding: 8px;
+margin-bottom: 10px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+input[type=submit] {
+background-color: #4CAF50;
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+}
+input[type=submit]:hover {
+background-color: #45a049;
+}
+</style>
+</head>
+<body>
+<h2>College Application Form</h2>
+<label for="fullname">Full Name:</label>
+<input type="text" id="fullname" name="fullname" required>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<label for="phone">Phone Number:</label>
+<input type="text" id="phone" name="phone">
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob" required>
+<label for="gender">Gender:</label>
+<select id="gender" name="gender" required>
+<option value="">Select Gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select>
+<label for="address">Address:</label>
+<textarea id="address" name="address" rows="4" required></textarea>
+<label for="highschool">High School Name:</label>
+<input type="text" id="highschool" name="highschool" required>
+<label for="gpa">High School GPA:</label>
+<input type="text" id="gpa" name="gpa" required>
+<label for="major">Intended Major:</label>
+<input type="text" id="major" name="major">
+<label for="essay">Personal Statement:</label>
+<textarea id="essay" name="essay" rows="6" required></textarea>
+<input type="submit" value="Submit Application">
+</form>
+</body>
+</html>
+</textarea></section>
+
+<section data-t="3. Write a CSS program to link external style sheet.">
+<textarea data-n="index.html">
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>External CSS Example</title>
+<!-- Linking external CSS file -->
+<link rel="stylesheet" href="D:\Web Programming Lab-demo\styles.css">
+</head>
+<body>
+<div class="container">
+<h1>Welcome to My Website</h1>
+<p>This is a paragraph of text. Here's another sentence.</p>
+</div>
+</body>
+</html>
+</textarea>
+<textarea data-n="styles.css">
+/* styles.css */
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+margin: 0;
+padding: 0;
+}
+h1 {
+color: #333;
+text-align: center;
+}
+.container {
+width: 80%;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+border: 1px solid #ccc;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+p {
+line-height: 1.6;
+}
+</textarea></section>
+
+<section data-t="4. Using CSS and HTML, make a webpage that has two columns (left light gray: 5 best selling Kindle books; right light green: 5 favourite celebrities or athletes).">
+<textarea data-n="column.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="columns.css">
+<title>Two Column Page</title>
+</head>
+<body>
+<div class="container">
+<div class="left-column">
+<h2>Top 5 Best Selling Books on Kindle</h2>
+<ul>
+<li>The Silent Patient by Alex Michaelides</li>
+<li>Where the Crawdads Sing by Delia Owens</li>
+<li>The Nightingale by Kristin Hannah</li>
+<li>Becoming by Michelle Obama</li>
+<li>The Tattooist of Auschwitz by Heather Morris</li>
+</ul>
+</div>
+<div class="right-column">
+<h2>My 5 Favorite Celebrities/Athletes</h2>
+<ul>
+<li>MSD</li>
+<li>Kamaraj</li>
+<li>MGR</li>
+<li>Rohit Sharma</li>
+<li>Virat Kohli</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
+</textarea>
+<textarea data-n="columns.css">
+/* columns.css */
+body
+{
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+font-color:grey;
+font-size:12px;
+}
+.container {
+display: flex;
+width: 100%;
+}
+.left-column, .right-column {
+width: 50%;
+padding: 20px;
+box-sizing: border-box;
+}
+.left-column {
+background-color: lightgray;
+}
+.right-column {
+background-color: lightgreen;
+}
+h2 {
+text-align: center;
+}
+ul {
+list-style-type: none;
+padding: 0;
+}
+li {
+margin-bottom: 10px;
+}
+</textarea></section>
+
+<section data-t="5. Write a program to illustrate CSS border style properties.">
+<textarea data-n="border.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Border Style Properties</title>
+<link rel="stylesheet" href="borders.css">
+</head>
+<body>
+<div class="box solid-border">Solid Border</div>
+<div class="box dotted-border">Dotted Border</div>
+<div class="box dashed-border">Dashed Border</div>
+<div class="box double-border">Double Border</div>
+<div class="box groove-border">Groove Border</div>
+<div class="box ridge-border">Ridge Border</div>
+<div class="box inset-border">Inset Border</div>
+<div class="box outset-border">Outset Border</div>
+</body>
+</html>
+</textarea>
+<textarea data-n="borders.css">
+/* borders.css */
+body {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+background-color: #f0f0f0;
+}
+.box {
+width: 200px;
+height: 100px;
+margin: 10px;
+padding: 10px;
+text-align: center;
+font-size: 16px;
+line-height: 1.5;
+}
+.solid-border {
+border: 2px solid #333; /* Solid border */
+}
+.dotted-border {
+border: 2px dotted #007bff; /* Dotted border */
+}
+.dashed-border {
+border: 3px dashed #28a745; /* Dashed border */
+}
+.double-border {
+border: 3px double #dc3545; /* Double border */
+}
+.groove-border {
+border: 4px groove #ffc107; /* Groove border */
+}
+.ridge-border {
+border: 4px ridge #17a2b8; /* Ridge border */
+}
+.inset-border {
+border: 4px inset #6c757d; /* Inset border */
+}
+.outset-border {
+border: 4px outset #6610f2; /* Outset border */
+}
+</textarea></section>
+
+<section data-t="6. Write a JavaScript code to illustrate the use of arithmetic operators">
+<textarea data-n="AO.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Arithmetic Operators Example</title>
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ margin: 20px;
+ }
+ .result {
+ margin-top: 10px;
+ }
+ </style>
+</head>
+<body>
+ <h1>Arithmetic Operators Example</h1>
+ <script>
+ // Define two numbers
+ let num1 = 10;
+ let num2 = 5;
+ // Perform arithmetic operations
+ let sum = num1 + num2; // Addition
+ let difference = num1 - num2; // Subtraction
+ let product = num1 * num2; // Multiplication
+ let quotient = num1 / num2; // Division
+ let remainder = num1 % num2; // Modulus
+ // Display results on the webpage
+ document.write("<div class='result'>Number 1: " + num1 + "</div>");
+ document.write("<div class='result'>Number 2: " + num2 + "</div>");
+ document.write("<div class='result'>Addition: " + sum + "</div>");
+ document.write("<div class='result'>Subtraction: " + difference + "</div>");
+ document.write("<div class='result'>Multiplication: " + product + "</div>");
+ document.write("<div class='result'>Division: " + quotient + "</div>");
+ document.write("<div class='result'>Modulus: " + remainder + "</div>");
+ // Display results in the console
+ console.log("Number 1: " + num1);
+ console.log("Number 2: " + num2);
+ console.log("Addition: " + sum); // 10 + 5 = 15
+ console.log("Subtraction: " + difference); // 10 - 5 = 5
+ console.log("Multiplication: " + product); // 10 * 5 = 50
+ console.log("Division: " + quotient); // 10 / 5 = 2
+ console.log("Modulus: " + remainder); // 10 % 5 = 0
+ </script>
+</body>
+</html>
+</textarea></section>
+
+<section data-t="7. Write a JavaScript code to guess a random number.">
+<textarea data-n="random.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guess the Number</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #f4f4f4;
+}
+#game {
+text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="game">
+<h1>Guess the Number</h1>
+<p>Guess a number between 1 and 10:</p>
+<input type="number" id="guessInput" min="1" max="10">
+<button id="submitGuess">Submit Guess</button>
+<p id="result"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+</textarea>
+<textarea data-n="script.js">
+//script.js
+document.addEventListener('DOMContentLoaded', () => {
+const random = Math.floor(Math.random() * 10) + 1;
+const guessInput = document.getElementById('guessInput');
+const submitGuess = document.getElementById('submitGuess');
+const result = document.getElementById('result');
+function handleGuess() {
+const userGuess = parseInt(guessInput.value);
+if (userGuess === random) {
+result.textContent = 'Congratulations! You guessed the correct number.';
+result.style.color = 'green';
+} else if (userGuess < 1 || userGuess > 10 || isNaN(userGuess)) {
+result.textContent = 'Please enter a number between 1 and 10.';
+result.style.color = 'red';
+} else {
+result.textContent = 'Try again!';
+result.style.color = 'red';
+}
+}
+submitGuess.addEventListener('click', handleGuess);
+});
+</textarea></section>
+
+<section data-t="8. Write a JavaScript code to check if an array contains a specified value.">
+<textarea data-n="findValue.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array Value Check</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+</style>
+</head>
+<body>
+<h1>Check if Array Contains a Specified Value</h1>
+<p id="result"></p>
+<script>
+// Function to check if an array contains a specified value
+function containsValue(array, value) {
+return array.includes(value);
+}
+// Example array and value to check
+const myArray = [1, 2, 3, 4, 5];
+const valueToCheck = 6;
+// Check if the value is in the array and display the result
+const resultElement = document.getElementById('result');
+if (containsValue(myArray, valueToCheck)) {
+resultElement.textContent = `${valueToCheck} is in the array.`;
+} else {
+resultElement.textContent = `${valueToCheck} is not in the array.`;
+}
+</script>
+</body>
+</html>
+</textarea></section>
+
+<section data-t="9. Write an AngularJS program using directives.">
+<textarea data-n="index.html">
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AngularJS Directives Demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+<h1>AngularJS Directives Demo</h1>
+<!-- Using custom directive -->
+<my-greeting></my-greeting>
+<!-- Using built-in directive -->
+<div>
+<label for="name">Name:</label>
+<input type="text" id="name" ng-model="name">
+<p>Hello, {{name}}!</p>
+</div>
+</body>
+</html>
+</textarea>
+<textarea data-n="app.js">
+// app.js
+// Define the AngularJS module
+var app = angular.module('myApp', []);
+// Define a custom directive
+app.directive('myGreeting', function() {
+return {
+restrict: 'E',
+template: '<h2>Welcome to the AngularJS Directives Demo!</h2>'
+};
+});
+// Define a controller
+app.controller('MainCtrl', ['$scope', function($scope) {
+$scope.name = 'Computer Science Students';
+}]);
+</textarea></section>
+
+<section data-t="10. Write an AngularJS program to add filters to directives.">
+<textarea data-n="index.html">
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<title>AngularJS Filters in Directives</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+</head>
+<body ng-controller="MainController as ctrl">
+<!-- Custom Directive Usage -->
+<div>
+<h3>Custom Directive with Filters</h3>
+<my-directive></my-directive>
+</div>
+</body>
+</html>
+</textarea>
+<textarea data-n="app.js">
+// app.js
+var app = angular.module('myApp', []);
+// Define a Controller
+app.controller('MainController', function() {
+this.data = {
+text: 'Hello World!',
+number: 123456.789,
+date: new Date(),
+jsonData: { name: 'John Doe', age: 30 }
+};
+});
+// Define a Custom Directive
+app.directive('myDirective', function() {
+return {
+restrict: 'E',
+template: `
+<div>
+<p><strong>Original Text:</strong> {{ ctrl.data.text }}</p>
+<p><strong>Uppercase Text:</strong> {{ ctrl.data.text | uppercase }}</p>
+<p><strong>Formatted Number:</strong> {{ ctrl.data.number | number:2 }}</p>
+<p><strong>Short Date:</strong> {{ ctrl.data.date | date:'shortDate' }}</p>
+<p><strong>JSON Data:</strong> {{ ctrl.data.jsonData | json }}</p>
+<p><strong>Currency Format:</strong> {{ ctrl.data.number | currency:'$' }}</p>
+</div>
+`,
+controller: 'MainController',
+controllerAs: 'ctrl'
+};
+});
+</textarea></section>
+
+<section data-t="11. Write an AngularJS program to add modules and controllers in file.">
+<textarea data-n="index.html">
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<title>AngularJS Filters in Directives</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+</head>
+<body ng-controller="MainController as ctrl">
+<!-- Custom Directive Usage -->
+<div>
+<h3>Custom Directive with Filters</h3>
+<my-directive></my-directive>
+</div>
+</body>
+</html>
+</textarea>
+<textarea data-n="app.js">
+// app.js
+// Define the AngularJS module
+var app = angular.module('myApp', []);
+// Define the MainController
+app.controller('MainController', ['$scope', function($scope) {
+$scope.items = []; // Initialize an empty array for items
+$scope.newItem = ''; // Model for the input field
+// Function to add an item
+$scope.addItem = function() {
+if ($scope.newItem) {
+$scope.items.push($scope.newItem); // Add new item to the array
+$scope.newItem = ''; // Clear the input field
+}
+};
+}]);
+</textarea></section>
+
+<section data-t="12. Write an AngularJS program to create a notepad application.">
+<textarea data-n="index.html">
+<!DOCTYPE html>
+<html lang="en" ng-app="notepadApp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Notepad Application</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+</head>
+<body ng-controller="NotepadController">
+<div class="container">
+<h1>Notepad</h1>
+<textarea ng-model="newNote" placeholder="Write your note here..."></textarea>
+<button ng-click="addNote()">Add Note</button>
+<ul>
+<li ng-repeat="note in notes">
+<span ng-bind="note.text"></span>
+<button ng-click="editNote(note)">Edit</button>
+<button ng-click="deleteNote(note)">Delete</button>
+</li>
+</ul>
+</div>
+</body>
+</html>
+</textarea>
+<textarea data-n="style.css">
+//style.css
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+margin: 0;
+padding: 20px;
+}
+.container {
+max-width: 600px;
+margin: auto;
+background: white;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+h1 {
+text-align: center;
+}
+textarea {
+width: 100%;
+height: 100px;
+margin-bottom: 10px;
+padding: 10px;
+}
+button {
+margin-right: 5px;
+}
+</textarea>
+<textarea data-n="app.js">
+// app.js
+angular.module('notepadApp', []).controller('NotepadController', function($scope) {
+$scope.notes = [];
+$scope.newNote = '';
+$scope.addNote = function() {
+if ($scope.newNote) {
+$scope.notes.push({ text: $scope.newNote });
+$scope.newNote = ''; // Clear the input field
+}
+};
+$scope.editNote = function(note) {
+const editedNote = prompt("Edit your note:", note.text);
+if (editedNote !== null) {
+note.text = editedNote;
+}
+};
+$scope.deleteNote = function(note) {
+const index = $scope.notes.indexOf(note);
+if (index !== -1) {
+$scope.notes.splice(index, 1);
+}
+};
+});
+</textarea></section>
+
+<section data-t="13. Login Application">
+<textarea data-n="index.html">
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Application</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+<style>
+body {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #f4f4f4;
+}
+.login-form {
+background: white;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+<body>
+<div class="login-form" ng-controller="LoginController">
+<h2>Login</h2>
+<form ng-submit="login()">
+<div>
+<label for="username">Username:</label>
+<input type="text" id="username" ng-model="username" required />
+</div>
+<div>
+<label for="password">Password:</label>
+<input type="password" id="password" ng-model="password" required />
+</div>
+<button type="submit">Login</button>
+<p ng-if="errorMessage" style="color: red;">{{ errorMessage }}</p>
+</form>
+</div>
+</body>
+</html>
+</textarea>
+<textarea data-n="app.js">
+// app.js
+// Define the AngularJS module
+var app = angular.module('loginApp', []);
+// Define the LoginController
+app.controller('LoginController', ['$scope', function($scope) {
+// Initialize model variables
+$scope.username = '';
+$scope.password = '';
+$scope.errorMessage = '';
+// Sample credentials for validation
+var validUsername = 'user';
+var validPassword = 'pass';
+// Login function
+$scope.login = function() {
+if ($scope.username === validUsername && $scope.password === validPassword) {
+alert('Login successful!');
+$scope.errorMessage = ''; // Clear error message if login is successful
+} else {
+$scope.errorMessage = 'Invalid username or password. Please try again.';
+}
+};
+}]);
+</textarea></section>
+</div>
+
+<script>
+var nav=document.getElementById('nav'),main=document.getElementById('main');
+function copy(text,btn){
+function done(){btn.textContent='Copied!';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok')},1500)}
+function fb(){var t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();try{document.execCommand('copy');done()}catch(e){btn.textContent='Press Ctrl+C'}document.body.removeChild(t)}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fb)}else fb();
+}
+document.querySelectorAll('#data section').forEach(function(s,i){
+var sec=document.createElement('section');sec.id='p'+(i+1);
+var h=document.createElement('h2');h.textContent=s.dataset.t;sec.appendChild(h);
+s.querySelectorAll('textarea').forEach(function(ta){
+var code=ta.value.replace(/^\n/,'').replace(/\s+$/,'')+'\n';
+var f=document.createElement('div');f.className='f';
+var hd=document.createElement('div');hd.className='fh';
+var nm=document.createElement('span');nm.textContent=ta.dataset.n;
+var b=document.createElement('button');b.textContent='Copy';b.onclick=function(){copy(code,b)};
+hd.appendChild(nm);hd.appendChild(b);
+var pre=document.createElement('pre');pre.textContent=code;
+f.appendChild(hd);f.appendChild(pre);sec.appendChild(f);
+});
+main.appendChild(sec);
+var a=document.createElement('a');a.href='#p'+(i+1);a.textContent=i+1;a.setAttribute('aria-label','Program '+(i+1));nav.appendChild(a);
+});
+document.getElementById('data').remove();
+</script>
+</body>
+</html>
